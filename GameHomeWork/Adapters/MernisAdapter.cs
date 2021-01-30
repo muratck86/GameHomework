@@ -12,8 +12,11 @@ namespace GameHomeWork.Adapters
         public bool CheckPerson(BaseMember member)
         {
             KPSPublicSoapClient client = new KPSPublicSoapClient(KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap);
-            return client.TCKimlikNoDogrulaAsync(Convert.ToInt64(((NativeMember)member).NationalIdNo),
-                member.Name, member.LastName, member.BirthDate.Year).Result.Body.TCKimlikNoDogrulaResult;
+            return client.TCKimlikNoDogrulaAsync(
+                Convert.ToInt64(((NativeMember)member).NationalIdNo),
+                member.Name,
+                member.LastName,
+                member.BirthDate.Year).Result.Body.TCKimlikNoDogrulaResult;
         }
     }
 }

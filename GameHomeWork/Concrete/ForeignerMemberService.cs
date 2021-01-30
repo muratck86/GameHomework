@@ -21,11 +21,5 @@ namespace GameHomeWork.Concrete
             else
                 Console.WriteLine("Error: member validation");
         }
-
-        public bool CheckPerson(ForeignerMember member)
-        {
-            Console.WriteLine("Please enter the confirmation code sent to your phone number...");
-            return true;
-        }
     }
 }
